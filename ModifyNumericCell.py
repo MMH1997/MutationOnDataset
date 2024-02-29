@@ -70,3 +70,16 @@ def modify_dataframe_randomly(df, n):
 
 # Example of usage
 data = {'A': [123.4, -456.8, 789],
+        'B': [234.6, 567, -890.1],
+        'C': [-345.9, 678, 901.7]}
+df = pd.DataFrame(data)
+print("Original DataFrame:")
+print(df)
+
+try:
+    # Randomly modify the DataFrame
+    modify_dataframe_randomly(df, 2)
+    print("\nModified DataFrame:")
+    print(df)
+except ValueError as error:
+    print(error)
